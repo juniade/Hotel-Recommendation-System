@@ -46,3 +46,6 @@
   #### Pada tahapan ini dilakukan penghapusan duplikat record contohnya seperti pada hotelid yang banyak mengnadung duplikasi data sehingga dapat membuat waktu komputasi semakin cepat
 - ### *Merging dataset* 
   #### Pada tahapan ini dilakukan penyauan kedua dataset yang disatukan berdasarkan hotelcode dan hotel id yang ditampung ke dalam variabel hotel. Kemudian melakukan seleksi fitur-fitur yang diarasa memiliki korelasi penting dalam membuat sistem rekomendasi seperti hotelcode, hotelname, roomtype, dan starrating pada dataset hotel yang telah dibuat
+  
+## Data Preparation
+#### Pada tahapan ini kita akan menghapus beberapa karakter yang tidak diperlukan dalam kolom roomtype. Krakter yang tidak diperlukan itu berupa punctuation (!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~) yang terdapat dalam library string.
