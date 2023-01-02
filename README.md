@@ -108,6 +108,6 @@ Untuk mendapatkan rekomendasi, kita hotel dengan nama 'Apollo Hotel London' deng
 -Terakhir hitung dengan rumus precision@K di atas
 #### Dari hasil rekomendasi yang dihasilkan, didapatkan precision sebagai berikut :
 
-#### precision@10 = 5 / 10 precision@10 = 50%
+#### precision@10 = 10 / 10 precision@10 = 100%
 
 #### Karena terdapat 10 hotel yang memiliki roomtype == 'standard_triple_room '/threshold maka didapatkan 100% precision dari model sistem rekomendasi dengan pendekatan content based filtering.
