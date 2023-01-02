@@ -95,3 +95,19 @@ Untuk mendapatkan rekomendasi, kita hotel dengan nama 'Apollo Hotel London' deng
 |8	Clachaig Inn	           |standard_triple_room |   3       |
 |6	ibis Budget Aix Le Canet |standard_triple_room |   2       |
 |9	Garni Farbe	s            |standard_triple_room |   2       |
+
+
+## Evaluation
+#### Untuk evaluasi dari sistem rekomendasi dengan pendekatan content based filtering kita dapat menggunakan salah satu metric yaitu precision. Precision adalah perbandingan antara True Positive (TP) dengan banyaknya data yang diprediksi positif. Atau juga bisa ditulis secara matematis sebagai berikut :
+
+#### *precision@K  = = (# of recommended item that relevan) / (# of recommended item)*
+#### Hal-hal yang perlu diperhatikan dalam menentukan precision yaitu:
+-Pertama kita memilih nilai K yaitu 10 (sesuai total hasil rekomendasi)
+-Lalu kita akan menentukan relevansi threshold yaitu roomtyoe "standard_triple_room"
+-Kemudian kita akan memfilter semua hotel roomtype yang relevan dengan threshold
+-Terakhir hitung dengan rumus precision@K di atas
+#### Dari hasil rekomendasi yang dihasilkan, didapatkan precision sebagai berikut :
+
+#### precision@10 = 5 / 10 precision@10 = 50%
+
+#### Karena terdapat 10 hotel yang memiliki roomtype == 'standard_triple_room '/threshold maka didapatkan 100% precision dari model sistem rekomendasi dengan pendekatan content based filtering.
