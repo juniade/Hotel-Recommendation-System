@@ -48,4 +48,24 @@
   #### Pada tahapan ini dilakukan penyauan kedua dataset yang disatukan berdasarkan hotelcode dan hotel id yang ditampung ke dalam variabel hotel. Kemudian melakukan seleksi fitur-fitur yang diarasa memiliki korelasi penting dalam membuat sistem rekomendasi seperti hotelcode, hotelname, roomtype, dan starrating pada dataset hotel yang telah dibuat
   
 ## Data Preparation
-#### Pada tahapan ini kita akan menghapus beberapa karakter yang tidak diperlukan dalam kolom roomtype. Krakter yang tidak diperlukan itu berupa punctuation (!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~) yang terdapat dalam library string.
+#### Pada tahapan ini kita akan menghapus beberapa karakter yang tidak diperlukan dalam kolom roomtype. Krakter yang tidak diperlukan itu berupa punctuation (!"#$%&\'() +,-./:;<=>?@[\\]^_ {|}~' yang terdapat dalam library string. Untuk melakukan penghapusan maka dibuatkan sebuah fungsi bernama text_proses
+#### selain itu dilakuakn reset index untuk me-reset index suapaya menjadi teratur dan normal kembali.
+| roomtype                      | roomtype                    |
+| ------------------------------| --------------------------- |
+| Deluxe, Guest room, 1 Double  | Deluxe Guest room 1 Double  |
+| Twin En-suite                 | Twin En suite               |
+
+#### Steleh itu kita ubah huruh kapital yang berada pada roomtype menjadi huruf kecil semua dengan menggunakan gungsi str.lower()
+| roomtype                      | roomtype                    |
+| ------------------------------| --------------------------- |
+| Deluxe, Guest room, 1 Double  | deluxe guest room 1 double  |
+| Twin En-suite                 | twin en suite               |
+
+#### selanjutnya kita replace spasi (" ") dengan ( _ )
+| roomtype                      | roomtype                    |
+| ------------------------------| --------------------------- |
+| Deluxe, Guest room, 1 Double  | deluxe_guest_room_1_double  |
+| Twin En-suite                 | twin_en_suite               |
+
+
+
