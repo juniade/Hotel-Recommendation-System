@@ -67,5 +67,31 @@
 | Deluxe, Guest room, 1 Double  | deluxe_guest_room_1_double  |
 | Twin En-suite                 | twin_en_suite               |
 
+##Modeling
+#### Model yang akan digunakan proyek kali ini yaitu menggunakan pendekatan content based filtering menggunakan TfidfVectorizer.
+### Content Based Filtering
+#### Content based filtering adalah metode rekomendasi item kepada pengguna dengan memerhatikan prefensi item pengguna sebelumnya. Tujuannya untuk memberikan N rekomendasi kepada pengguna dengan tingakt kemiripan item yang sama dengan preferensi dari pengguna sebelumnya. Sebagai contoh, seseorang menyukai hotel dengan tipe kamar dual room maka sistem akan merekomendasikan kepada pengguna hotel-hotel yang menyediakan tipe kamar dual room 
+#### Dalam pembuatannya, content based filtering menggunakan konsep perhitungan vectoru, TF-IDF, dan Cosine Similarity yang intinya dikonversikan dari data/teks menjadi berbentuk vector.
 
+-Kelebihan
+#### Tidak memerlukan data apapun terhadap pengguna
+#### Dapat merekomendasikan item khusus
+-Kelemahan
+#### Membutuhkan banyak pengetahuan suatu domain
+#### Membuat rekomendasi berdasarkan minat pengguna yang ada saja
 
+Recommendation Result
+Untuk mendapatkan rekomendasi, kita hotel dengan nama 'Apollo Hotel London' dengan roomtype "standard_triple_room". Jika sistem rekomendasi berjalan dengan baik, maka kita akan mendapatkan hasil hotel dengan kategori yang sama yaitu "standard_triple_room". Hasil rekomendasi di bawah sudah diurutkan dari starrating terbesar.
+
+|Hotelname	                 |Roomtype	           |Starrating |
+|----------------------------|---------------------|-----------|
+|5	Hotel U Kvapilu	         |standard_triple_room |   4       |
+|7	Fuerte Grazalema Hotel	 |standard_triple_room |   4       |
+|0	The Marquis Inn	         |standard_triple_room |   3       |
+|1	Hotel Kresowianka	       |standard_triple_room |   3       |
+|2	Minerva Guest House	     |standard_triple_room |   3       |
+|3	Hesperia Sant Joan Suites|standard_triple_room |   3       |
+|4	Hotel Flaminio Tavernelle|standard_triple_room |   3       |
+|8	Clachaig Inn	           |standard_triple_room |   3       |
+|6	ibis Budget Aix Le Canet |standard_triple_room |   2       |
+|9	Garni Farbe	s            |standard_triple_room |   2       |
