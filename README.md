@@ -38,5 +38,5 @@
 
 ## Exploratory Data Analysis
 #### Pada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan merging data.
-- Menangani *missing value*
+- ### Menangani *missing value*
   #### Pada dataset *Hotel_details.csv* terdapat *missing value* pada kolom addres dan url sedangkan pada dataset *Hotel_Room_attributes.csv* terdapat missing value pada kolom roomamenities dan ratedescription
