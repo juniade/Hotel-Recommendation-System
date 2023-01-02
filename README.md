@@ -67,7 +67,7 @@
 | Deluxe, Guest room, 1 Double  | deluxe_guest_room_1_double  |
 | Twin En-suite                 | twin_en_suite               |
 
-##Modeling
+## Modeling
 #### Model yang akan digunakan proyek kali ini yaitu menggunakan pendekatan content based filtering menggunakan TfidfVectorizer.
 ### Content Based Filtering
 #### Content based filtering adalah metode rekomendasi item kepada pengguna dengan memerhatikan prefensi item pengguna sebelumnya. Tujuannya untuk memberikan N rekomendasi kepada pengguna dengan tingakt kemiripan item yang sama dengan preferensi dari pengguna sebelumnya. Sebagai contoh, seseorang menyukai hotel dengan tipe kamar dual room maka sistem akan merekomendasikan kepada pengguna hotel-hotel yang menyediakan tipe kamar dual room 
