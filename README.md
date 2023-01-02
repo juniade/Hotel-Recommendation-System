@@ -16,5 +16,27 @@
 #### Dataset yang digunakan dalam proyek ini diambil dari website kaggle [hotel recomendation|Kaggle](https://www.kaggle.com/datasets/keshavramaiah/hotel-recommendation). Pada proyek ini digunakan 2 buah dataset yaitu *Hotel_details.csv* dan *Hotel_Room_attributes.csv*
 #### Dataset pertama yaitu *Hotel_details.csv* yang memiliki 108048 baris dan 14 kolom dengan informasi sebagai berikut:
 - id : id user
-- -hotelid : id hotel
+- hotelid : id hotel
+- address : alamat hotel berasal
+- city : kota hotel berasal
+- country : negara hotel berasal
+- zipcode : zipcode dari hotel
+- propertytype : tipe properti dari hotel
+- starrating : rating dari hotel
+- latitude : garis lintang hotel
+- longitude : garis bujur hotel
+- Source : jumlah sumber hotel
+- url : alamat website hotel
+- curr: pusat unit rekam jejak sumber dari hotel
 
+#### Dataset kedua yaitu *Hotel_Room_attributes.csv* dengan total 165873 baris dan 5 kolom dengan informasi sebagai berikut:
+- id :n adalah id dari user
+- hotelcode : id hotel
+- roomamenities : fasilitas kamar
+- roomtype : tipe kamar
+- ratedescription : deskripsi kamar
+
+## Exploratory Data Analysis
+#### Pada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan merging data.
+- Menangani *missing value*
+- #### Pada dataset *Hotel_details.csv* terdapat *missing value* pada kolom addres dan url sedangkan pada dataset *Hotel_Room_attributes.csv* terdapat missing value pada kolom roomamenities dan ratedescription
