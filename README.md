@@ -37,6 +37,9 @@
 - ratedescription : deskripsi kamar
 
 ## Exploratory Data Analysis
-#### Pada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan merging data.
+#### Pada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan *merging* data.
 - ### Menangani *missing value*
   #### Pada dataset *Hotel_details.csv* terdapat *missing value* pada kolom addres dan url sedangkan pada dataset *Hotel_Room_attributes.csv* terdapat missing value pada kolom roomamenities dan ratedescription
+- ### Menghapus fitur yang tidak relevan #### Pada tahapn ini dilakukan penghapusan beberapa kolom yang dirasa tidak diperlukan dalam menentukan model sistem rekomendasi diantaranya seperti kolom id,zipcode pada dataset *Hotel_details.csv* dan id pada dataset *Hotel_Room_attributes.csv*
+- ### Menghapus duplikat #### Pada tahapan ini dilakukan penghapusan duplikat record contohnya seperti pada hotelid yang banyak mengnadung duplikasi data sehingga dapat membuat waktu komputasi semakin cepat
+- ### *Merging dataset* #### Pada tahapan ini dilakukan penyauan kedua dataset yang disatukan berdasarkan hotelcode dan hotel id yang ditampung ke dalam variabel hotel. Kemudian melakukan seleksi fitur-fitur yang diarasa memiliki korelasi penting dalam membuat sistem rekomendasi seperti hotelcode, hotelname, roomtype, dan starrating pada dataset hotel yang telah dibuat
