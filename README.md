@@ -13,3 +13,4 @@
 #### Solusi yang dapat dilakukan agar tujuan terpenuhi yaitu dengan membuat model rekomendasi sistem untuk memberikan rekomendasi hotel dengan pendekatan *content based filtering*
 
 ## Data Undersatnding
+#### Dataset yang digunakan dalam proyek ini diambil dari website kaggle [hotel recomendation|Kaggle](https://www.kaggle.com/datasets/keshavramaiah/hotel-recommendation)
