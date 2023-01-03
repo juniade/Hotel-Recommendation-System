@@ -36,10 +36,10 @@ Dataset pertama yaitu *Hotel_details.csv* yang memiliki 108048 baris dan 14 kolo
 - roomtype : tipe kamar
 - ratedescription : deskripsi kamar
 
-## Exploratory Data Analysis
-Selain itu,ada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan *merging* data.
+## Data Preparation
+Pada tahapan ini dilakukan pemrosesan data seperti menghapus *missing value*, menghapus diplikat, menghapus fitur yang tidak relevan, serta melakukan *merging* data.
 - ### Menangani *missing value*
-  Pada dataset *Hotel_details.csv* terdapat *missing value* pada kolom addres dan url sedangkan pada dataset *Hotel_Room_attributes.csv* terdapat missing value pada kolom roomamenities dan ratedescription
+  Pada dataset *Hotel_details.csv* terdapat *missing value* pada kolom addres dan url sedangkan pada dataset *Hotel_Room_attributes.csv* terdapat missing value pada kolom roomamenities dan ratedescription. Untuk menangani missing value
 - ### Menghapus fitur yang tidak relevan 
   Pada tahapn ini dilakukan penghapusan beberapa kolom yang dirasa tidak diperlukan dalam menentukan model sistem rekomendasi diantaranya seperti kolom id,zipcode pada dataset *Hotel_details.csv* dan id pada dataset *Hotel_Room_attributes.csv*
 - ### Menghapus duplikat 
@@ -47,8 +47,7 @@ Selain itu,ada tahapan ini dilakukan pemrosesan data seperti menghapus *missing 
 - ### *Merging dataset* 
   Pada tahapan ini dilakukan penyauan kedua dataset yang disatukan berdasarkan hotelcode dan hotel id yang ditampung ke dalam variabel hotel. Kemudian melakukan seleksi fitur-fitur yang diarasa memiliki korelasi penting dalam membuat sistem rekomendasi seperti hotelcode, hotelname, roomtype, dan starrating pada dataset hotel yang telah dibuat
   
-## Data Preparation
-Pada tahapan ini kita akan menghapus beberapa karakter yang tidak diperlukan dalam kolom roomtype. Krakter yang tidak diperlukan itu berupa punctuation (!"#$%&\'() +,-./:;<=>?@[\\]^_ {|}~' yang terdapat dalam library string. Untuk melakukan penghapusan maka dibuatkan sebuah fungsi bernama text_proses
+Pada tahapan ini kita juga akan menghapus beberapa karakter yang tidak diperlukan dalam kolom roomtype. Krakter yang tidak diperlukan itu berupa punctuation (!"#$%&\'() +,-./:;<=>?@[\\]^_ {|}~' yang terdapat dalam library string. Untuk melakukan penghapusan maka dibuatkan sebuah fungsi bernama text_proses
 selain itu dilakuakn reset index untuk me-reset index suapaya menjadi teratur dan normal kembali.
 | roomtype                      | roomtype                    |
 | ------------------------------| --------------------------- |
@@ -71,7 +70,7 @@ selanjutnya kita replace spasi (" ") dengan ( _ )
 Model yang akan digunakan yaitu menggunakan pendekatan content based filtering menggunakan TfidfVectorizer.
 ### Content Based Filtering
 Content based filtering adalah metode rekomendasi item kepada pengguna dengan memerhatikan prefensi item pengguna sebelumnya. Tujuannya untuk memberikan N rekomendasi kepada pengguna dengan tingakt kemiripan item yang sama dengan preferensi dari pengguna sebelumnya. Sebagai contoh, seseorang menyukai hotel dengan tipe kamar dual room maka sistem akan merekomendasikan kepada pengguna hotel-hotel yang menyediakan tipe kamar dual room 
-Dalam pembuatannya, content based filtering menggunakan konsep perhitungan vector, TF-IDF, dan Cosine Similarity yang intinya dikonversikan dari data/teks menjadi berbentuk vector. Cara kerja dari TF-IDF yaitu menghitung nilai Term Frequency (TF) dan Inverse Document Frequency (IDF) pada setiap token (kata) di setiap dokumen dalam korpus. Secara sederhana, metode TF-IDF digunakan untuk mengetahui berapa sering suatu kata muncul di dalam dokumen. Cara kerja dari cosine similarity yaitu dengan membandingkan kemiripan antar dokumen
+Dalam pembuatannya, content based filtering menggunakan konsep perhitungan vector, TF-IDF, dan Cosine Similarity yang intinya dikonversikan dari data/teks menjadi berbentuk vector. Cara kerja dari TF-IDF yaitu menghitung nilai Term Frequency (TF) dan Inverse Document Frequency (IDF) pada setiap token (kata) di setiap dokumen dalam korpus. Secara sederhana, metode TF-IDF digunakan untuk mengetahui berapa sering suatu kata muncul di dalam dokumen. Cara kerja dari cosine similarity yaitu dengan membandingkan kemiripan antar item
 
 -Kelebihan
 Tidak memerlukan data apapun terhadap pengguna
